@@ -78,7 +78,7 @@ const theme = createMuiTheme({
                 marginBottom: 10,
                 padding: '10px 15px',
                 '& h2': {
-                    display: flex,
+                    display: 'flex',
                     alignItems: 'center',
                     fontWeight: 800,
                 },
