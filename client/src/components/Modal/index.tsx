@@ -35,7 +35,6 @@ const Modal: React.FC<ModalProps> = ({title, children, onClose, visible = false}
                 </DialogTitle>
                 <DialogContent>{children}</DialogContent>
             </Dialog>
-
         </div>
     );
 };
