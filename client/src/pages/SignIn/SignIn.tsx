@@ -9,7 +9,7 @@ import ChatBubbleOutlineIcon
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControl from '@material-ui/core/FormControl';
 import TextField from '@material-ui/core/TextField';
-import Modal from "../Modal";
+import Modal from "../../components/Modal";
 
 
 export const useStylesSignIn = makeStyles((theme) => ({
