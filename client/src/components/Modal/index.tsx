@@ -5,7 +5,6 @@ import DialogTitle from '@material-ui/core/DialogTitle'
 import IconButton from '@material-ui/core/IconButton'
 import CloseIcon from '@material-ui/icons/Close'
 import { useStylesSignIn } from '../../pages/SignIn/SignIn'
-import { Divider } from '@material-ui/core'
 
 interface ModalProps {
   title?: string;
