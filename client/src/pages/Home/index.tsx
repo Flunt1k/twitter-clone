@@ -36,7 +36,9 @@ const Index = (): React.ReactElement => {
               <Paper variant="outlined" className={classes.tweetsHeader}>
                 <Typography variant="h6">Главная</Typography>
               </Paper>
-              <AddTweetForm classes={classes}/>
+<div className={classes.addForm}>
+  <AddTweetForm classes={classes}/>
+</div>
               <div className={classes.addFormBottomLine}/>
               {[
                 ...new Array(20).fill(
