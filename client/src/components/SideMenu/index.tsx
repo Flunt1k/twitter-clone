@@ -10,7 +10,7 @@ import UserIcon from '@material-ui/icons/PermIdentityOutlined'
 import { Button, IconButton, Typography } from '@material-ui/core'
 import Hidden from '@material-ui/core/Hidden'
 import CreateIcon from '@material-ui/icons/CreateOutlined'
-import { useStylesHome } from '../../pages/Home/Home'
+import { useStylesHome } from '../../pages/Home/theme'
 
 interface SideMenuProps {
   classes: ReturnType<typeof useStylesHome>;
