@@ -33,7 +33,6 @@ import {
   selectIsTweetsLoading,
   selectTweetsItems,
 } from '../../store/ducks/tweets/selectors';
-import {fetchTweet} from '../../store/ducks/tweet/actionCreators';
 
 const Home = (): React.ReactElement => {
   const classes = useStylesHome();
@@ -45,15 +44,11 @@ const Home = (): React.ReactElement => {
       [dispatch]);
   const handleFetchTags = React.useCallback(() => dispatch(fetchTags()),
       [dispatch]);
-  const handleFetchTweet = React.useCallback(
-      () => dispatch(fetchTweet('5f954705b52f996338a6dfcf')),
-      [dispatch]);
 
   React.useEffect(() => {
     handleFetchTweets();
     handleFetchTags();
-    handleFetchTweet();
-  }, [handleFetchTweets, handleFetchTags, handleFetchTweet]);
+  }, [handleFetchTweets, handleFetchTags]);
   return (
       <section>
         <Container maxWidth="lg" className={classes.wrapper}>
