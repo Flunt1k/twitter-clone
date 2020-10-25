@@ -5,11 +5,13 @@ import rootSaga from './saga';
 import rootReducer from './rootReducer'
 import {TweetsState} from './ducks/tweets/contracts/state';
 import {TagsState} from './ducks/tags/contracts/state';
+import {TweetState} from './ducks/tweet/contracts/state';
 
 const sagaMiddleware = createSagaMiddleware()
 
 export interface RootState {
   tweets: TweetsState;
+  tweet: TweetState
   tags: TagsState;
 }
 

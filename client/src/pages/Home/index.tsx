@@ -21,17 +21,19 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import {useStylesHome} from './theme';
 
 import Tags from '../../components/Tags/Tags';
+import FullTweet from './components/FullTweet';
+import BackButton from '../../components/BackButton/BackButton';
 import {Tweet} from '../../components/Tweet';
 import {SideMenu} from '../../components/SideMenu';
 import {AddTweetForm} from '../../components/AddTweetForm';
 import {SearchTextField} from '../../components/SearchTextField';
-import BackButton from '../../components/BackButton/BackButton';
 import {fetchTweets} from '../../store/ducks/tweets/actionCreators';
 import {fetchTags} from '../../store/ducks/tags/actionCreators';
 import {
   selectIsTweetsLoading,
   selectTweetsItems,
 } from '../../store/ducks/tweets/selectors';
+import {fetchTweet} from '../../store/ducks/tweet/actionCreators';
 
 const Home = (): React.ReactElement => {
   const classes = useStylesHome();
@@ -43,11 +45,15 @@ const Home = (): React.ReactElement => {
       [dispatch]);
   const handleFetchTags = React.useCallback(() => dispatch(fetchTags()),
       [dispatch]);
+  const handleFetchTweet = React.useCallback(
+      () => dispatch(fetchTweet('5f954705b52f996338a6dfcf')),
+      [dispatch]);
 
   React.useEffect(() => {
     handleFetchTweets();
     handleFetchTags();
-  }, [handleFetchTweets, handleFetchTags]);
+    handleFetchTweet();
+  }, [handleFetchTweets, handleFetchTags, handleFetchTweet]);
   return (
       <section>
         <Container maxWidth="lg" className={classes.wrapper}>
@@ -95,6 +101,7 @@ const Home = (): React.ReactElement => {
                         )
                   }
                 </Route>
+                <Route path="/home/tweet/:id" exact component={FullTweet}/>
               </Paper>
             </Grid>
             <Grid item sm={3} md={3}>
