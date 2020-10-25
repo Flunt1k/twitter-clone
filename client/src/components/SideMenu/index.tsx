@@ -16,6 +16,7 @@ import { useStylesHome } from '../../pages/Home/theme'
 import { AddTweetForm } from '../AddTweetForm'
 import {FetchTweetsActionInterface} from '../../store/ducks/tweets/actionCreators'
 import {FetchTagsActionInterface} from '../../store/ducks/tags/actionCreators';
+import {Link} from 'react-router-dom';
 
 interface SideMenuProps {
   classes: ReturnType<typeof useStylesHome>;
@@ -37,14 +38,16 @@ export const SideMenu: React.FC<SideMenuProps> = ({ classes, fetchTweets, fetchT
   return (
     <ul className={classes.sideMenuList}>
       <li className={classes.sideMenuListItem}>
-        <IconButton aria-label="" color="primary"
-                    onClick={() => {
-                      fetchTweets()
-                      fetchTags()
-                    }}
-                    className={classes.logo}>
-          <TwitterIcon className={classes.logoIcon}/>
-        </IconButton>
+        <Link to="/home">
+          <IconButton aria-label="" color="primary"
+                      onClick={() => {
+                        fetchTweets()
+                        fetchTags()
+                      }}
+                      className={classes.logo}>
+            <TwitterIcon className={classes.logoIcon}/>
+          </IconButton>
+        </Link>
       </li>
       <li className={classes.sideMenuListItem}>
         <div>

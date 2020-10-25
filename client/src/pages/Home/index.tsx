@@ -1,5 +1,6 @@
 import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
+import {Route} from 'react-router-dom'
 import {
   Avatar,
   Button,
@@ -61,17 +62,19 @@ const Home = (): React.ReactElement => {
                   <AddTweetForm classes={classes}/>
                 </div>
                 <div className={classes.addFormBottomLine}/>
-                {
-                  isLoading
-                      ? <div className={classes.tweetsCentered}>
-                        <CircularProgress/></div>
-                      : tweets.map((tweet) =>
-                          <Tweet key={tweet._id}
-                                 text={tweet.text}
-                                 classes={classes}
-                                 user={tweet.user}/>,
-                      )
-                }
+               <Route path="/home">
+                 {
+                   isLoading
+                       ? <div className={classes.tweetsCentered}>
+                         <CircularProgress/></div>
+                       : tweets.map((tweet) =>
+                           <Tweet key={tweet._id}
+                                  text={tweet.text}
+                                  classes={classes}
+                                  user={tweet.user}/>,
+                       )
+                 }
+               </Route>
               </Paper>
             </Grid>
             <Grid item sm={3} md={3}>
