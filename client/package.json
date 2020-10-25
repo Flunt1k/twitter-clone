@@ -2,6 +2,7 @@
   "name": "twitter-clone",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
@@ -17,6 +18,7 @@
     "axios": "^0.21.0",
     "classnames": "^2.2.6",
     "immer": "^7.0.9",
+    "json-server": "^0.16.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.1",
@@ -32,7 +34,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "json-server": "json-server --watch public/db.json --port 3001"
   },
   "eslintConfig": {
     "extends": "react-app"

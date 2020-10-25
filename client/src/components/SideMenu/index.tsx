@@ -15,13 +15,15 @@ import Modal from '../Modal'
 import { useStylesHome } from '../../pages/Home/theme'
 import { AddTweetForm } from '../AddTweetForm'
 import {FetchTweetsActionInterface} from '../../store/ducks/tweets/actionCreators'
+import {FetchTagsActionInterface} from '../../store/ducks/tags/actionCreators';
 
 interface SideMenuProps {
   classes: ReturnType<typeof useStylesHome>;
   fetchTweets: () => FetchTweetsActionInterface
+  fetchTags: () => FetchTagsActionInterface
 }
 
-export const SideMenu: React.FC<SideMenuProps> = ({ classes, fetchTweets }: SideMenuProps): React.ReactElement => {
+export const SideMenu: React.FC<SideMenuProps> = ({ classes, fetchTweets, fetchTags }: SideMenuProps): React.ReactElement => {
   const [visibleAddTweet, setVisibleAddTweet] = React.useState<boolean>(false)
 
   const handleClickAddTweet = () => {
@@ -36,7 +38,10 @@ export const SideMenu: React.FC<SideMenuProps> = ({ classes, fetchTweets }: Side
     <ul className={classes.sideMenuList}>
       <li className={classes.sideMenuListItem}>
         <IconButton aria-label="" color="primary"
-                    onClick={fetchTweets}
+                    onClick={() => {
+                      fetchTweets()
+                      fetchTags()
+                    }}
                     className={classes.logo}>
           <TwitterIcon className={classes.logoIcon}/>
         </IconButton>

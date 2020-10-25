@@ -19,15 +19,14 @@ import PersonAddIcon from '@material-ui/icons/PersonAddOutlined';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import {useStylesHome} from './theme';
 
+import Tags from '../../components/Tags/Tags';
 import {Tweet} from '../../components/Tweet';
 import {SideMenu} from '../../components/SideMenu';
 import {AddTweetForm} from '../../components/AddTweetForm';
 import {SearchTextField} from '../../components/SearchTextField';
 import {fetchTweets} from '../../store/ducks/tweets/actionCreators';
-import {
-  selectIsTweetsLoading,
-  selectTweetsItems,
-} from '../../store/ducks/tweets/selectors';
+import {fetchTags} from '../../store/ducks/tags/actionCreators';
+import {selectIsTweetsLoading, selectTweetsItems,} from '../../store/ducks/tweets/selectors';
 
 const Home = (): React.ReactElement => {
   const classes = useStylesHome();
@@ -37,16 +36,21 @@ const Home = (): React.ReactElement => {
 
 
   const handleFetchTweets = React.useCallback(() => dispatch(fetchTweets()), [dispatch])
+  const handleFetchTags = React.useCallback(() => dispatch(fetchTags()), [dispatch])
 
   React.useEffect(() => {
     handleFetchTweets()
-  }, [handleFetchTweets]);
+    handleFetchTags()
+  }, [handleFetchTweets, handleFetchTags]);
   return (
       <section>
         <Container maxWidth="lg" className={classes.wrapper}>
           <Grid container spacing={3}>
             <Grid item sm={1} md={3}>
-              <SideMenu classes={classes} fetchTweets={handleFetchTweets}/>
+              <SideMenu classes={classes}
+                        fetchTweets={handleFetchTweets}
+                        fetchTags={handleFetchTags}
+              />
             </Grid>
             <Grid item sm={8} md={6}>
               <Paper variant="outlined" className={classes.tweetsWrapper}>
@@ -84,50 +88,7 @@ const Home = (): React.ReactElement => {
                     }}
                     fullWidth
                 />
-                <Paper className={classes.rightSideBlock}>
-                  <Paper className={classes.rightSideBlockHeader}
-                         variant="outlined">
-                    <b>Актуальные темы</b>
-                  </Paper>
-                  <List>
-                    <ListItem className={classes.rightSideBlockItem}>
-                      <ListItemText
-                          primary="Санкт-Петербург"
-                          secondary={
-                            <Typography component="span" variant="body2"
-                                        color="textSecondary">
-                              Твитов: 3 331
-                            </Typography>
-                          }
-                      />
-                    </ListItem>
-                    <Divider component="li"/>
-                    <ListItem className={classes.rightSideBlockItem}>
-                      <ListItemText
-                          primary="#коронавирус"
-                          secondary={
-                            <Typography component="span" variant="body2"
-                                        color="textSecondary">
-                              Твитов: 163 122
-                            </Typography>
-                          }
-                      />
-                    </ListItem>
-                    <Divider component="li"/>
-                    <ListItem className={classes.rightSideBlockItem}>
-                      <ListItemText
-                          primary="Беларусь"
-                          secondary={
-                            <Typography component="span" variant="body2"
-                                        color="textSecondary">
-                              Твитов: 13 554
-                            </Typography>
-                          }
-                      />
-                    </ListItem>
-                    <Divider component="li"/>
-                  </List>
-                </Paper>
+                <Tags classes={classes} />
                 <Paper className={classes.rightSideBlock}>
                   <Paper className={classes.rightSideBlockHeader}
                          variant="outlined">

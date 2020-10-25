@@ -1,0 +1,139 @@
+{
+  "tweets": [
+    {
+      "_id": "5f9547057f446074fe196600",
+      "text": "Nulla aliquip adipisicing elit ad adipisicing ut minim aute in ullamco aute. In Lorem pariatur nulla cupidatat magna cupidatat elit culpa Lorem anim adipisicing exercitation. Aliqua magna laboris duis do occaecat in ipsum incididunt id Lorem pariatur. Aliqua deserunt pariatur dolore consequat. Dolore commodo magna commodo ullamco eu.",
+      "user": {
+        "fullname": "Middleton Montoya",
+        "username": "imelda",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?4"
+      }
+    },
+    {
+      "_id": "5f954705b52f996338a6dfcf",
+      "text": "Anim ipsum sit sunt sint nulla et. Adipisicing mollit laboris deserunt et sint sit veniam duis enim aliqua esse laborum adipisicing. Ea adipisicing Lorem deserunt velit. Enim sunt dolore duis duis. Sit sint enim tempor labore ullamco.",
+      "user": {
+        "fullname": "Crawford Mason",
+        "username": "johnston",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?5"
+      }
+    },
+    {
+      "_id": "5f9547052d3511fc2045c919",
+      "text": "Irure deserunt proident elit dolore dolore pariatur enim pariatur magna amet. Qui aliquip eu ad adipisicing veniam enim. Pariatur do anim ipsum sint mollit qui. Incididunt eiusmod ea nulla deserunt incididunt mollit laboris. Irure non nisi sunt quis Lorem pariatur nulla nulla exercitation sit excepteur elit adipisicing.",
+      "user": {
+        "fullname": "Stokes Griffith",
+        "username": "howe",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?2"
+      }
+    },
+    {
+      "_id": "5f9547057f817209217c4f3b",
+      "text": "Officia ea tempor culpa do Lorem cillum. Mollit do eiusmod dolor minim sunt tempor adipisicing deserunt. Non occaecat adipisicing esse fugiat culpa ad amet excepteur dolore. Nostrud exercitation enim veniam minim cillum et eiusmod consectetur. Pariatur culpa irure cupidatat et consequat ad exercitation voluptate laborum adipisicing veniam veniam dolore.",
+      "user": {
+        "fullname": "Hoover Crane",
+        "username": "caitlin",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?1"
+      }
+    },
+    {
+      "_id": "5f954705f78cfcab650b6fb8",
+      "text": "Ex duis dolor enim ut labore occaecat minim cupidatat tempor voluptate. Irure velit non adipisicing veniam nostrud. Qui esse voluptate esse aute sint minim adipisicing fugiat qui aute ullamco occaecat nostrud. Lorem reprehenderit velit deserunt qui ipsum. Proident esse tempor minim duis exercitation fugiat aliqua ullamco.",
+      "user": {
+        "fullname": "Leona Flowers",
+        "username": "kaufman",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?4"
+      }
+    },
+    {
+      "_id": "5f95470507bb79ceaca63e84",
+      "text": "Sunt eiusmod et do eu sunt reprehenderit commodo proident velit laborum laborum. Velit magna ullamco adipisicing voluptate labore anim in esse culpa in aliqua consectetur deserunt. Anim officia nulla quis occaecat amet dolor. Tempor labore ea ut sunt id. Anim ipsum nostrud velit ut.",
+      "user": {
+        "fullname": "Rutledge Stephenson",
+        "username": "billie",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?3"
+      }
+    },
+    {
+      "_id": "5f954705b9e36ca75c89ac29",
+      "text": "Ipsum qui elit dolore laborum commodo Lorem consectetur occaecat laboris. Aliquip cupidatat ex cillum minim pariatur nisi labore consequat qui duis. Cillum do cillum velit sit qui magna. Cillum eu consequat do deserunt tempor ullamco occaecat culpa ipsum veniam. Dolor enim deserunt tempor Lorem ea veniam.",
+      "user": {
+        "fullname": "Mcpherson Frazier",
+        "username": "tonya",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?3"
+      }
+    },
+    {
+      "_id": "5f9547058ef9e9e48840f87d",
+      "text": "Enim ea commodo sit laborum consectetur laboris ad. Magna id ut culpa nisi occaecat dolore culpa esse aute. Fugiat cupidatat ex quis est dolor esse adipisicing qui culpa consequat consectetur nulla ea. Reprehenderit tempor proident sint id est velit in et tempor ullamco ea aute. Pariatur exercitation enim nulla sint.",
+      "user": {
+        "fullname": "Compton Pena",
+        "username": "celia",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?4"
+      }
+    },
+    {
+      "_id": "5f954705b8d7394c308156b8",
+      "text": "Commodo nulla est consectetur incididunt magna tempor tempor nulla incididunt commodo. Ad aliquip velit sunt aute proident labore. Ex exercitation velit adipisicing sunt Lorem magna consequat quis proident sunt sit. Reprehenderit elit eiusmod aliquip et. Sint do sunt irure quis ea amet sunt.",
+      "user": {
+        "fullname": "Wilson Goff",
+        "username": "kathy",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?2"
+      }
+    },
+    {
+      "_id": "5f954705d7adca6975a45db8",
+      "text": "Dolore exercitation labore est velit laboris eu sint dolore. Velit nulla velit eiusmod veniam consequat id amet sunt ex ea dolor. Minim culpa in eu nostrud. Fugiat aliquip enim proident reprehenderit. Elit veniam aute aliquip exercitation.",
+      "user": {
+        "fullname": "Roberts Guzman",
+        "username": "mosley",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?2"
+      }
+    }
+  ],
+  "user": {
+    "_id": "5f2849179fs3123151898210",
+    "fullname": "Vladimir Tester",
+    "username": "Flunt1k",
+    "avatarUrl": "https://avatars1.githubusercontent.com/u/47900126?s=460&u=73374144b1599eb01c54f25e524893af01663879&v=4"
+  },
+  "tags": [
+    {
+      "_id": "123fpdsjkfos121241212",
+      "name": "HandOfRussiaHistory",
+      "counter": 803
+    },
+    {
+      "_id": "217dfslfjsdfjl21334fj442",
+      "name": "Навальный",
+      "counter": 365
+    },
+    {
+      "_id": "65jd22j201491501fj1232314",
+      "name": "Гитлер",
+      "counter": 369
+    },
+    {
+      "_id": "21j533250018214j21401992jf",
+      "name": "JavaScript",
+      "counter": 515
+    }
+  ],
+  "users": [
+    {
+      "fullname": "Middleton Montoya",
+      "username": "imelda",
+      "avatarUrl": "https://source.unsplash.com/random/100x100?4"
+    },
+    {
+      "fullname": "Mcpherson Frazier",
+      "username": "tonya",
+      "avatarUrl": "https://source.unsplash.com/random/100x100?3"
+    },
+    {
+      "fullname": "Rutledge Stephenson",
+      "username": "billie",
+      "avatarUrl": "https://source.unsplash.com/random/100x100?3"
+    }
+  ]
+}

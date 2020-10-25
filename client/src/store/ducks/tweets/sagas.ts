@@ -3,7 +3,7 @@ import {takeLatest, call, put} from 'redux-saga/effects';
 import {
   setTweets,
   setTweetsLoadingState,
-  TweetsAction,
+  TweetsActionsType,
 } from './actionCreators';
 import {TweetApi} from '../../../services/api/tweetsApi';
 import {LoadingState} from './contracts/state';
@@ -19,5 +19,5 @@ export function* fetchTweetsRequest() {
 }
 
 export function* tweetsSaga() {
-  yield takeLatest(TweetsAction.FETCH_TWEETS, fetchTweetsRequest);
+  yield takeLatest(TweetsActionsType.FETCH_TWEETS, fetchTweetsRequest);
 }
