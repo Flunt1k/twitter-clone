@@ -61,6 +61,11 @@ export const useStylesHome = makeStyles((theme: Theme) => ({
     borderTop: 0,
     borderBottom: 0,
   },
+
+  tweetsCentered: {
+    marginTop: 50,
+    textAlign: 'center'
+  },
   tweet: {
     display: 'flex',
     '&:hover': {

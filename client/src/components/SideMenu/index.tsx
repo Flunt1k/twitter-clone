@@ -14,13 +14,14 @@ import CreateIcon from '@material-ui/icons/CreateOutlined'
 import Modal from '../Modal'
 import { useStylesHome } from '../../pages/Home/theme'
 import { AddTweetForm } from '../AddTweetForm'
+import {FetchTweetsActionInterface} from '../../store/ducks/tweets/actionCreators'
 
 interface SideMenuProps {
   classes: ReturnType<typeof useStylesHome>;
+  fetchTweets: () => FetchTweetsActionInterface
 }
 
-export const SideMenu: React.FC<SideMenuProps> = ({ classes }: SideMenuProps): React.ReactElement => {
-
+export const SideMenu: React.FC<SideMenuProps> = ({ classes, fetchTweets }: SideMenuProps): React.ReactElement => {
   const [visibleAddTweet, setVisibleAddTweet] = React.useState<boolean>(false)
 
   const handleClickAddTweet = () => {
@@ -35,6 +36,7 @@ export const SideMenu: React.FC<SideMenuProps> = ({ classes }: SideMenuProps): R
     <ul className={classes.sideMenuList}>
       <li className={classes.sideMenuListItem}>
         <IconButton aria-label="" color="primary"
+                    onClick={fetchTweets}
                     className={classes.logo}>
           <TwitterIcon className={classes.logoIcon}/>
         </IconButton>
