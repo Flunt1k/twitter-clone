@@ -1,6 +1,6 @@
 import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {Route} from 'react-router-dom'
+import {Route} from 'react-router-dom';
 import {
   Avatar,
   Button,
@@ -25,9 +25,13 @@ import {Tweet} from '../../components/Tweet';
 import {SideMenu} from '../../components/SideMenu';
 import {AddTweetForm} from '../../components/AddTweetForm';
 import {SearchTextField} from '../../components/SearchTextField';
+import BackButton from '../../components/BackButton/BackButton';
 import {fetchTweets} from '../../store/ducks/tweets/actionCreators';
 import {fetchTags} from '../../store/ducks/tags/actionCreators';
-import {selectIsTweetsLoading, selectTweetsItems,} from '../../store/ducks/tweets/selectors';
+import {
+  selectIsTweetsLoading,
+  selectTweetsItems,
+} from '../../store/ducks/tweets/selectors';
 
 const Home = (): React.ReactElement => {
   const classes = useStylesHome();
@@ -35,13 +39,14 @@ const Home = (): React.ReactElement => {
   const tweets = useSelector(selectTweetsItems);
   const isLoading = useSelector(selectIsTweetsLoading);
 
-
-  const handleFetchTweets = React.useCallback(() => dispatch(fetchTweets()), [dispatch])
-  const handleFetchTags = React.useCallback(() => dispatch(fetchTags()), [dispatch])
+  const handleFetchTweets = React.useCallback(() => dispatch(fetchTweets()),
+      [dispatch]);
+  const handleFetchTags = React.useCallback(() => dispatch(fetchTags()),
+      [dispatch]);
 
   React.useEffect(() => {
-    handleFetchTweets()
-    handleFetchTags()
+    handleFetchTweets();
+    handleFetchTags();
   }, [handleFetchTweets, handleFetchTags]);
   return (
       <section>
@@ -56,25 +61,40 @@ const Home = (): React.ReactElement => {
             <Grid item sm={8} md={6}>
               <Paper variant="outlined" className={classes.tweetsWrapper}>
                 <Paper variant="outlined" className={classes.tweetsHeader}>
-                  <Typography variant="h6">Главная</Typography>
+
+                  <Route path="/home/:any">
+                    <BackButton/>
+                  </Route>
+
+                  <Route path={['/home', '/home/search']} exact>
+                    <Typography variant="h6">Твиты</Typography>
+                  </Route>
+
+                  <Route path="/home/tweet">
+                    <Typography variant="h6">Твитнуть</Typography>
+                  </Route>
                 </Paper>
-                <div className={classes.addForm}>
-                  <AddTweetForm classes={classes}/>
-                </div>
-                <div className={classes.addFormBottomLine}/>
-               <Route path="/home">
-                 {
-                   isLoading
-                       ? <div className={classes.tweetsCentered}>
-                         <CircularProgress/></div>
-                       : tweets.map((tweet) =>
-                           <Tweet key={tweet._id}
-                                  text={tweet.text}
-                                  classes={classes}
-                                  user={tweet.user}/>,
-                       )
-                 }
-               </Route>
+                <Route path={['/home', '/home/search']} exact>
+                  <Paper>
+                    <div className={classes.addForm}>
+                      <AddTweetForm classes={classes}/>
+                    </div>
+                    <div className={classes.addFormBottomLine}/>
+                  </Paper>
+                </Route>
+                <Route path="/home" exact>
+                  {
+                    isLoading
+                        ? <div className={classes.tweetsCentered}>
+                          <CircularProgress/></div>
+                        : tweets.map((tweet) =>
+                            <Tweet key={tweet._id}
+                                   {...tweet}
+                                   classes={classes}
+                            />,
+                        )
+                  }
+                </Route>
               </Paper>
             </Grid>
             <Grid item sm={3} md={3}>
@@ -91,7 +111,7 @@ const Home = (): React.ReactElement => {
                     }}
                     fullWidth
                 />
-                <Tags classes={classes} />
+                <Tags classes={classes}/>
                 <Paper className={classes.rightSideBlock}>
                   <Paper className={classes.rightSideBlockHeader}
                          variant="outlined">

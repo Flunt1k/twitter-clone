@@ -1,5 +1,5 @@
-import { makeStyles, Theme } from '@material-ui/core'
-import { grey } from '@material-ui/core/colors'
+import {makeStyles, Theme} from '@material-ui/core';
+import {grey} from '@material-ui/core/colors';
 
 export const useStylesHome = makeStyles((theme: Theme) => ({
   wrapper: {
@@ -62,24 +62,22 @@ export const useStylesHome = makeStyles((theme: Theme) => ({
     borderBottom: 0,
   },
 
+  tweetWrapper: {
+    color: 'inherit',
+    textDecoration: 'none',
+  },
+
   tweetsCentered: {
     marginTop: 50,
-    textAlign: 'center'
-  },
-  tweet: {
-    display: 'flex',
-    '&:hover': {
-      backgroundColor: 'rgb(245, 248, 250)',
-    },
-    cursor: 'pointer',
-    paddingTop: 15,
-    paddingLeft: 20,
+    textAlign: 'center',
   },
   tweetsCentred: {
     marginTop: 50,
     textAlign: 'center',
   },
   tweetsHeader: {
+    display: 'flex',
+    alignItems: 'center',
     borderTop: 0,
     borderLeft: 0,
     borderRight: 0,
@@ -88,6 +86,19 @@ export const useStylesHome = makeStyles((theme: Theme) => ({
     '& h6': {
       fontWeight: 800,
     },
+  },
+  tweet: {
+    display: 'flex',
+    alignItems: 'flex-start',
+    '&:hover': {
+      backgroundColor: 'rgb(245, 248, 250)',
+    },
+    cursor: 'pointer',
+    paddingTop: 15,
+    paddingLeft: 20,
+  },
+  tweetsHeaderArrowBack: {
+    marginRight: 20,
   },
   tweetFooter: {
     display: 'flex',
@@ -147,8 +158,8 @@ export const useStylesHome = makeStyles((theme: Theme) => ({
     },
     '& a': {
       color: 'inherit',
-      textDecoration: 'none'
-    }
+      textDecoration: 'none',
+    },
   },
   addForm: {
     padding: 20,
@@ -191,4 +202,4 @@ export const useStylesHome = makeStyles((theme: Theme) => ({
     display: 'flex',
     alignItems: 'center',
   },
-}))
+}));
